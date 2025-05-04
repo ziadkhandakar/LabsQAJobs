@@ -16,7 +16,7 @@ exports.RecruiterDashboard = class RecruiterDashboard
         this.popupCloseBtn = page.locator('.jet-popup__close-button');
         this.fillUpButton = page.locator('a.elementor-button', { hasText: 'Fill Up' });
         this.editBtnProfile = page.locator('[data-id="9e106cb"]');
-        this.editBtnAbout = page.locator('xpath=(//*[name()="circle"])[4]');
+        this.editBtnAbout = page.locator('xpath=/html/body/div[2]/div/div/div[2]/div/div/div/div/div/div/div[2]/div/div[2]/div/div/div/div/a/div[4]/span/*[name()="svg"]/*[name()="circle"]');
         this.completeProfTitle= page.locator('h3.elementor-icon-box-title span span');
 
     }

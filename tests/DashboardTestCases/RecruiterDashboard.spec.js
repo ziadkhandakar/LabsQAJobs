@@ -18,8 +18,9 @@ test('Verify user can not edit About Us without completing profile', async({page
     const recruiterDashboard = new RecruiterDashboard(page);
     await login.gotoLogin();
     await login.login('Claud.Gulgowski@gmail.com','Demo1234');
-    await recruiterDashboard.editAboutUs();
-    //await recruiterDashboard.popupOverlayAbout.waitFor({ state: 'visible' });
-    //await expect(recruiterDashboard.completeProfTitle).toBeVisible();
+    await recruiterDashboard.editBtnAbout.scrollIntoViewIfNeeded();
+    await recruiterDashboard.editBtnAbout.click();
+    await recruiterDashboard.popupOverlayAbout.waitFor({ state: 'visible' });
+    await expect(recruiterDashboard.completeProfTitle).toBeVisible();
 
 });
