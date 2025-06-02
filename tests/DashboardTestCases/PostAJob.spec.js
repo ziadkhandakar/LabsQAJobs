@@ -65,3 +65,15 @@ test('Verify the Fill Up button is redirected to Update Profile page', async({pa
 
 
 });
+
+test('Verify the Post Job page is appeared when the profile is completed during browsing the Post A Job page', async({page})=>{
+    const login= new LoginPage(page);
+    const postAJobPage= new PostAJobPage(page);
+
+    await login.gotoLogin();
+    await login.login('Maybelle.McGlynn34@hotmail.com','Demo1234');
+    await postAJobPage.gotoPostAJob();
+    await expect(postAJobPage.headingTitle).toBeVisible;
+
+
+});
